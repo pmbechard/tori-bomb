@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  cursor: pointer;
+}
+
+#bomb {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 100px;
+}
+
+#present {
+  font-size: 150px;
+  z-index: 1;
+  animation: fall 3s;
+}
+
+@keyframes byepresent {
+  10% {
+    transform: rotate(-20deg);
+  }
+  20% {
+    transform: rotate(-25deg);
+  }
+  40% {
+    transform: rotate(-20deg);
+  }
+  80% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes explosion {
+  100% {
+    transform: scale(20);
+  }
+}
